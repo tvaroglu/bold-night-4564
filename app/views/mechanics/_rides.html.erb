@@ -1,0 +1,9 @@
+<h3><em>All Rides Currently Assigned:</em></h3>
+<% @mechanic.assigned_rides.each do |ride| %>
+  <div id="ride-<%= ride.id %>">
+    <p><strong>Name: </strong><%= ride.name %></p>
+    <p><strong>Open: </strong><%= ride.open ? 'Yes' : 'No' %></p>
+    <p><strong>Thrill Level: </strong><%= ride.thrill_rating %></p>
+    <br>
+  </div>
+<% end %>

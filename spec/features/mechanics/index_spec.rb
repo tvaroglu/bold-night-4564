@@ -34,4 +34,20 @@ RSpec.describe 'mechanics index' do
     end
   end
 
+  it 'displays a link to the mechanic show page' do
+    mechanic = Mechanic.create!(
+      name: 'Tim Taylor',
+      years_of_experience: 20
+    )
+
+    visit '/mechanics'
+    # save_and_open_page
+
+    within "#mechanic-#{mechanic.id}" do
+      expect(page).to have_content("Name: #{mechanic.name}")
+      click_on("#{mechanic.name}")
+      expect(current_path).to eq("/mechanics/#{mechanic.id}")
+    end
+  end
+
 end

@@ -4,7 +4,7 @@
 
 <% @mechanics.each do |mechanic| %>
   <div id="mechanic-<%= mechanic.id %>">
-    <p><strong>Name: </strong><%= mechanic.name %></p>
+    <p><strong>Name: </strong><%= link_to "#{mechanic.name}", "/mechanics/#{mechanic.id}" %></p>
     <p><strong>Years of Experience: </strong><%= mechanic.years_of_experience %></p>
     <br>
   </div>

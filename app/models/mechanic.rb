@@ -6,4 +6,13 @@ class Mechanic < ApplicationRecord
     average(:years_of_experience)
   end
 
+  def assigned_rides
+    rides.where(open: true)
+    .order(thrill_rating: :desc)
+  end
+
+  def assigned_ride_count
+    assigned_rides.count
+  end
+
 end

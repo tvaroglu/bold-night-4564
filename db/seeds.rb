@@ -34,3 +34,12 @@ ride_3 = Ride.create!(
   thrill_rating: 100,
   open: true
 )
+ride_4 = Ride.create!(
+  name: 'The Screaming Oak',
+  thrill_rating: 75,
+  open: true
+)
+
+mechanic_1.rides << ride_1
+mechanic_1.rides << ride_2
+mechanic_1.rides << ride_3

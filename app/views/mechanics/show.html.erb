@@ -1,0 +1,8 @@
+<h1>Mechanic: <%= @mechanic.name %></h1>
+<h3>Years of Experience: <%= @mechanic.years_of_experience %></h3>
+<br>
+<% if @mechanic.assigned_ride_count != 0 %>
+  <%= render "rides" %>
+<% else %>
+  <h3><em>No Rides Currently Assigned</em></h3>
+<% end %>

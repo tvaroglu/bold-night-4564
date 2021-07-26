@@ -32,10 +32,4 @@ RSpec.describe Ride do
     end
   end
 
-  describe 'instance methods' do
-    xit 'it does stuff' do
-      # stuff
-    end
-  end
-
 end
