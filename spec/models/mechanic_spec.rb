@@ -7,11 +7,22 @@ RSpec.describe Mechanic do
   end
 
   describe 'class methods' do
-    xit 'it does stuff' do
-      # stuff
-    end
+    it 'it can return #average_experience of all mechanics' do
+      mechanic_1 = Mechanic.create!(
+        name: 'Tim Taylor',
+        years_of_experience: 20
+      )
+      mechanic_2 = Mechanic.create!(
+        name: 'Arthur Fonzarelli',
+        years_of_experience: 30
+      )
 
-    xit 'it does more stuff' do
+      expect(Mechanic.average_experience.to_i).to eq(25)
+    end
+  end
+
+  describe 'instance methods' do
+    xit 'it does stuff' do
       # stuff
     end
   end
