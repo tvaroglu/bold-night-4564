@@ -1,0 +1,19 @@
+<h1>Mechanic: <%= @mechanic.name %></h1>
+<h3>Years of Experience: <%= @mechanic.years_of_experience %></h3>
+<br>
+<% if @mechanic.assigned_ride_count != 0 %>
+  <%= render "rides" %>
+<% else %>
+  <h3><em>No Rides Currently Assigned</em></h3>
+<% end %>
+<br>
+<h3><em>Add Rides to Mechanic:</em></h3>
+<%= form_with url: "/mechanics/#{@mechanic.id}", method: :get, local: true do |f| %>
+  <%= f.label :search, "Ride Id:" %>
+  <%= f.text_field :search %>
+  <%= f.submit "Search Rides" %>
+<% end %>
+<br>
+<% if !@ride.nil? %>
+  <%= render "search" %>
+<% end %>

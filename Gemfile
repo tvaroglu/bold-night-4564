@@ -35,12 +35,14 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
-  gem 'capybara'
-  gem 'launchy'
   gem 'pry'
   gem 'simplecov'
-  gem 'shoulda-matchers', '~> 3.1'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'shoulda-matchers', '~> 4.0'
+  gem 'orderly'
 end
 
 group :development do

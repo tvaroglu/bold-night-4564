@@ -1,0 +1,8 @@
+<h3><em>Search Results:</em></h3>
+<div id="ride-<%= @ride.id %>">
+  <p><strong>Name: </strong><%= @ride.name %></p>
+  <p><strong>Open: </strong><%= @ride.open ? 'Yes' : 'No' %></p>
+  <p><strong>Thrill Level: </strong><%= @ride.thrill_rating %></p>
+  <%= button_to "Add #{@ride.name}", "/mechanics/#{@mechanic.id}/rides", method: :post, params: { ride_id: "#{@ride.id}"} %>
+  <br>
+</div>
