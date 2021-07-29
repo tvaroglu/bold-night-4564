@@ -7,7 +7,7 @@ class MechanicsController < ApplicationController
   def show
     @mechanic = Mechanic.find(params[:id])
     if !params[:search].nil? && params[:search] != ''
-      @rides = Ride.where(id: params[:search])
+      @ride = Ride.find_by(id: params[:search])
     end
   end
 
